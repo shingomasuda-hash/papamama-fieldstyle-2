@@ -4,8 +4,8 @@
   "note": "原本は Google Drive「FIELDSTYLE」フォルダ。画像srcは必ずローカル /public/design/ を使用（Drive共有URLは使わない）。",
   "assets": [
     { "path": "reference/lp2-full.jpg", "size": [517, 14254], "source": "Drive: FIELDSTYLE/LP2/FIELDSTYLE_LP2_2026.jpg", "use": "全長の完成デザイン参考（FV部分 y<1118 は旧版）。配信しない", "sha256_16": "34097245fca7418a" },
-    { "path": "public/design/lp2-fv-1.jpg", "size": [590, 1335], "source": "Drive: FIELDSTYLE/LP2/FIELDSTYLE_FV_LP2-1.jpg（無加工コピー）", "use": "メインFV（クエリなし / ?fv=1 / 未知の値）", "sha256_16": "37e46a2329b57a13" },
-    { "path": "public/design/lp2-fv-2.jpg", "size": [573, 1298], "source": "Drive: FIELDSTYLE/LP2/7 1FIELDSTYLE_FV_LP2-2.jpg（無加工コピー）", "use": "別案FV（?fv=2）", "sha256_16": "ff84c122e9d2ac2b" },
+    { "path": "public/design/lp2-fv-1.jpg", "size": [594, 1544], "source": "Drive: FIELDSTYLE/LP2/FIELDSTYLE_FV_LP1-1.jpg（LP2フォルダ内。ファイル名はLP1だがLP2用。無加工コピー）", "use": "メインFV（クエリなし / ?fv=1 / 未知の値）", "sha256_16": "38f1f6714027bb37" },
+    { "path": "public/design/lp2-fv-2.jpg", "size": [596, 1554], "source": "Drive: FIELDSTYLE/LP2/FIELDSTYLE_FV_LP1-2.jpg（LP2フォルダ内。ファイル名はLP1だがLP2用。無加工コピー）", "use": "別案FV（?fv=2）", "sha256_16": "1a45879f71179dcd" },
     { "path": "public/design/lp2-body.png", "size": [517, 13136], "source": "reference/lp2-full.jpg の y=1118〜14253 を無劣化切り出し", "use": "ボディ（表示は高さ12997まで。以降はフッター下の白キャンバス）", "sha256_16": "4c86e0cb8dac0b4b" },
     { "path": "public/design/lp2-body.webp", "size": [517, 13136], "source": "lp2-body.png のロスレスWebP（画素完全一致を検証済み）", "use": "ボディ（WebP対応ブラウザ）", "sha256_16": "31eed8fb2234d171" },
     { "path": "public/design/staff-all.png", "size": [3830, 816], "source": "Drive: FIELDSTYLE/FIELDSTYLE_LP1-LP2共通", "use": "共通スタッフ6名の原本シート（配信には未使用）", "sha256_16": "cc67e35b1d1fab99" },
