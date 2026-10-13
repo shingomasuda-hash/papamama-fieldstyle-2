@@ -1,0 +1,48 @@
+/*
+ * 表示幅 = min(画面幅, 517px)。517px を超える画面では原寸を中央配置。
+ * --u = 表示幅 / 517（デザイン 1px あたりの表示サイズ）。カスタムプロパティは使用箇所で
+ * 解決されるため、子孫要素では cqw が .inner（コンテナ）の幅を基準にする。
+ */
+.page {
+  min-height: 100vh;
+  background: #000;
+}
+
+.inner {
+  position: relative;
+  width: 100%;
+  max-width: var(--design-width);
+  margin: 0 auto;
+  container-type: inline-size;
+  --u: calc(100cqw / 517);
+}
+
+.fv,
+.bodyImage {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.body {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.hotspot {
+  position: absolute;
+  display: block;
+  z-index: 2;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.hotspot:focus {
+  outline: none;
+}
+
+.hotspot:focus-visible {
+  outline: 3px solid #fff;
+  outline-offset: 2px;
+  box-shadow: 0 0 0 5px #000;
+}

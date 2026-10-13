@@ -1,0 +1,21 @@
+{
+  "project": "PAPAMAMACARS FIELDSTYLE 2026 / LP2",
+  "designWidth": 517,
+  "note": "原本は Google Drive「FIELDSTYLE」フォルダ。画像srcは必ずローカル /public/design/ を使用（Drive共有URLは使わない）。",
+  "assets": [
+    { "path": "reference/lp2-full.jpg", "size": [517, 14254], "source": "Drive: FIELDSTYLE/LP2/FIELDSTYLE_LP2_2026.jpg", "use": "全長の完成デザイン参考（FV部分 y<1118 は旧版）。配信しない", "sha256_16": "34097245fca7418a" },
+    { "path": "public/design/lp2-fv-1.jpg", "size": [590, 1335], "source": "Drive: FIELDSTYLE/LP2/FIELDSTYLE_FV_LP2-1.jpg（無加工コピー）", "use": "メインFV（クエリなし / ?fv=1 / 未知の値）", "sha256_16": "37e46a2329b57a13" },
+    { "path": "public/design/lp2-fv-2.jpg", "size": [573, 1298], "source": "Drive: FIELDSTYLE/LP2/7 1FIELDSTYLE_FV_LP2-2.jpg（無加工コピー）", "use": "別案FV（?fv=2）", "sha256_16": "ff84c122e9d2ac2b" },
+    { "path": "public/design/lp2-body.png", "size": [517, 13136], "source": "reference/lp2-full.jpg の y=1118〜14253 を無劣化切り出し", "use": "ボディ（表示は高さ12997まで。以降はフッター下の白キャンバス）", "sha256_16": "4c86e0cb8dac0b4b" },
+    { "path": "public/design/lp2-body.webp", "size": [517, 13136], "source": "lp2-body.png のロスレスWebP（画素完全一致を検証済み）", "use": "ボディ（WebP対応ブラウザ）", "sha256_16": "31eed8fb2234d171" },
+    { "path": "public/design/staff-all.png", "size": [3830, 816], "source": "Drive: FIELDSTYLE/FIELDSTYLE_LP1-LP2共通", "use": "共通スタッフ6名の原本シート（配信には未使用）", "sha256_16": "cc67e35b1d1fab99" },
+    { "path": "public/design/staff/staff-01.png〜staff-06.png", "size": [586, 816], "source": "staff-all.png の x=0/644/1294/1944/2594/3244 から幅586で切り出し（既存素材と画素完全一致を検証済み）", "use": "STAFFスライダーのカード（森行→飯沼→後藤→高木→山田→松浦）" },
+    { "path": "public/design/staff/staff-branch-front.png", "size": [516, 32], "source": "reference/lp2-full.jpg の x=0〜515, y=9193〜9224 の原本画素（背景の黒と静止ロープのみ透明化）", "use": "STAFFの枝・葉の前面レイヤー（スライドするロープを枝の下にくぐらせる）" }
+  ],
+  "urls": {
+    "CONSULTATION_URL": "https://s.lmes.jp/landing-qr/2007227107-GgA3P6zw?uLand=hxg1Jo",
+    "PAINT_URL": "https://s.lmes.jp/landing-qr/2007227107-GgA3P6zw?uLand=WvWa0c",
+    "INSTAGRAM_URL": "https://s.lmes.jp/landing-qr/2007227107-GgA3P6zw?uLand=pxS26L"
+  },
+  "ctaAreasBodyXYWH": "src/lp2/config.ts の CTA_AREAS を参照（実画像から色検出で確定）"
+}
