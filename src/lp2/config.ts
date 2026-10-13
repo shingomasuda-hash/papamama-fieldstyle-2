@@ -18,8 +18,8 @@ export type FvKey = "1" | "2";
 
 /** FV 画像（原本ファイルをそのまま配信。幅517px表示に縮小、縦横比は維持） */
 export const FV_IMAGES: Record<FvKey, { src: string; width: number; height: number }> = {
-  "1": { src: "/design/lp2-fv-1.jpg", width: 594, height: 1544 },
-  "2": { src: "/design/lp2-fv-2.jpg", width: 596, height: 1554 },
+  "1": { src: "/design/lp2-fv-1.jpg", width: 594, height: 1543 },
+  "2": { src: "/design/lp2-fv-2.jpg", width: 595, height: 1554 },
 };
 
 /** `?fv=` の値から FV を決定。クエリなし・未知の値は FV1 */
