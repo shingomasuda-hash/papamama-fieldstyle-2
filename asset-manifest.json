@@ -4,7 +4,7 @@
   "note": "原本は Google Drive「FIELDSTYLE」フォルダ。画像srcは必ずローカル /public/design/ を使用（Drive共有URLは使わない）。",
   "assets": [
     { "path": "reference/lp2-full.jpg", "size": [517, 14254], "source": "Drive: FIELDSTYLE/LP2/FIELDSTYLE_LP2_2026.jpg", "use": "全長の完成デザイン参考（FV部分 y<1118 は旧版）。配信しない", "sha256_16": "34097245fca7418a" },
-    { "path": "public/design/lp2-fv-1.jpg", "size": [594, 1543], "source": "Drive: FIELDSTYLE/LP2/FIELDSTYLE_FV_LP1-1.jpg（LP2フォルダ内。ファイル名はLP1だがLP2用）。最下段1行の明るい線を jpegtran で無劣化トリミング", "use": "メインFV（クエリなし / ?fv=1 / 未知の値）", "sha256_16": "b213fe61f8c58ab3" },
+    { "path": "public/design/lp2-fv-1.png", "size": [465, 1953], "source": "Drive: FIELDSTYLE/LP2/FIELDSTYLE_FV_LP2-1-1.jpg（実体はPNG。RGBA全不透明→RGB PNGに無劣化変換）", "use": "メインFV（クエリなし / ?fv=1 / 未知の値）。プレゼント告知ブロックを含む", "sha256_16": "14de3f37ec0d3b5f" },
     { "path": "public/design/lp2-fv-2.jpg", "size": [595, 1554], "source": "Drive: FIELDSTYLE/LP2/FIELDSTYLE_FV_LP1-2.jpg（LP2フォルダ内。ファイル名はLP1だがLP2用）。右端1列の明るい線を jpegtran で無劣化トリミング", "use": "別案FV（?fv=2）", "sha256_16": "b4ba5ffc96999bc4" },
     { "path": "public/design/lp2-body.png", "size": [517, 13136], "source": "reference/lp2-full.jpg の y=1118〜14253 を無劣化切り出し。右端 x=516 の明るい線は x=515 の画素で置換", "use": "ボディ（表示は高さ12997まで。以降はフッター下の白キャンバス）", "sha256_16": "801ea3c3d17dea3d" },
     { "path": "public/design/lp2-body.webp", "size": [517, 13136], "source": "lp2-body.png のロスレスWebP（画素完全一致を検証済み）", "use": "ボディ（WebP対応ブラウザ）", "sha256_16": "71351d851f023372" },

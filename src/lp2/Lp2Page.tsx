@@ -25,7 +25,7 @@ export function Lp2Page({ fv }: { fv: FvKey }) {
           src={fvImage.src}
           width={fvImage.width}
           height={fvImage.height}
-          alt="あなただけの一台で、遊びは、もっと自由になる。日本最大級の遊びの祭典 FIELDSTYLE OUTDOOR & LIFESTYLE FESTA 出店決定！ 2026.11/14(土)–11/15(日)"
+          alt={fvImage.alt}
           fetchPriority="high"
           decoding="async"
           data-fv={fv}
