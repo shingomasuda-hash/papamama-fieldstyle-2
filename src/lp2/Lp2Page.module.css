@@ -24,6 +24,23 @@
   height: auto;
 }
 
+/* FV 直下のプレゼント告知（縮小して中央寄せ。背景は画像と同じ黒） */
+.present {
+  background: #000;
+}
+
+.presentImage {
+  display: block;
+  height: auto;
+  margin: 0 auto;
+}
+
+/* ボディ冒頭の余白を trimTop 分だけ隠す（内側の座標系は原寸のまま） */
+.bodyClip {
+  width: 100%;
+  overflow: hidden;
+}
+
 .body {
   position: relative;
   width: 100%;

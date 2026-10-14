@@ -31,32 +31,58 @@ export function Lp2Page({ fv }: { fv: FvKey }) {
           data-fv={fv}
         />
 
-        <div className={s.body} style={{ aspectRatio: `${BODY_IMAGE.width} / ${BODY_IMAGE.visibleHeight}` }}>
-          <picture>
-            <source srcSet={BODY_IMAGE.webp} type="image/webp" />
+        {fvImage.present && (
+          <div
+            className={s.present}
+            style={{ paddingTop: u(fvImage.present.marginTop), paddingBottom: u(fvImage.present.marginBottom) }}
+          >
             <img
-              className={s.bodyImage}
-              src={BODY_IMAGE.png}
-              width={BODY_IMAGE.width}
-              height={BODY_IMAGE.height}
-              alt=""
+              className={s.presentImage}
+              src={fvImage.present.src}
+              width={fvImage.present.width}
+              height={fvImage.present.height}
+              alt={fvImage.present.alt}
               decoding="async"
+              style={{ width: `${fvImage.present.scale * 100}%` }}
             />
-          </picture>
+          </div>
+        )}
 
-          {CTA_AREAS.map((a) => (
-            <a
-              key={a.id}
-              className={s.hotspot}
-              href={CTA_HREF[a.kind]}
-              aria-label={a.label}
-              data-cta={a.kind}
-              data-cta-position={a.id}
-              style={{ left: u(a.x), top: u(a.y), width: u(a.w), height: u(a.h) }}
-            />
-          ))}
+        {/* ボディ冒頭の余白を trimTop 分だけ隠す。リンク・スライダーの座標は原寸のまま */}
+        <div
+          className={s.bodyClip}
+          style={{ aspectRatio: `${BODY_IMAGE.width} / ${BODY_IMAGE.visibleHeight - BODY_IMAGE.trimTop}` }}
+        >
+          <div
+            className={s.body}
+            style={{ aspectRatio: `${BODY_IMAGE.width} / ${BODY_IMAGE.visibleHeight}`, marginTop: u(-BODY_IMAGE.trimTop) }}
+          >
+            <picture>
+              <source srcSet={BODY_IMAGE.webp} type="image/webp" />
+              <img
+                className={s.bodyImage}
+                src={BODY_IMAGE.png}
+                width={BODY_IMAGE.width}
+                height={BODY_IMAGE.height}
+                alt=""
+                decoding="async"
+              />
+            </picture>
 
-          <StaffSlider />
+            {CTA_AREAS.map((a) => (
+              <a
+                key={a.id}
+                className={s.hotspot}
+                href={CTA_HREF[a.kind]}
+                aria-label={a.label}
+                data-cta={a.kind}
+                data-cta-position={a.id}
+                style={{ left: u(a.x), top: u(a.y), width: u(a.w), height: u(a.h) }}
+              />
+            ))}
+
+            <StaffSlider />
+          </div>
         </div>
 
         {/* 画像内テキストの要約（スクリーンリーダー・検索エンジン向け。画面には表示しない） */}

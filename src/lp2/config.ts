@@ -19,13 +19,33 @@ export type FvKey = "1" | "2";
 const FV_ALT_BASE =
   "あなただけの一台で、遊びをもっと自由に。日本最大級の遊びの祭典 FIELDSTYLE OUTDOOR & LIFESTYLE FESTA 出店決定！ 2026.11/14(土)–11/15(日) 愛知県国際展示場";
 
-/** FV 画像（原本画素のまま配信。幅517px表示に拡縮、縦横比は維持） */
-export const FV_IMAGES: Record<FvKey, { src: string; width: number; height: number; alt: string }> = {
+type FvImage = { src: string; width: number; height: number; alt: string };
+
+/**
+ * FV 画像（原本画素のまま配信。幅517px表示に拡縮、縦横比は維持）。
+ * `present` があれば FV 直下にプレゼント告知を縮小・中央寄せで表示する。
+ * 余白はデザイン px（517基準）。
+ */
+export const FV_IMAGES: Record<
+  FvKey,
+  FvImage & { present?: FvImage & { scale: number; marginTop: number; marginBottom: number } }
+> = {
   "1": {
-    src: "/design/lp2-fv-1.png",
+    // 原本 FIELDSTYLE_FV_LP2-1-1 の y=0〜1199
+    src: "/design/lp2-fv-1-top.png",
     width: 465,
-    height: 1953,
-    alt: `${FV_ALT_BASE} 予約者全員にプレゼント！ PRESENT 01 FIELDSTYLE入場チケット PRESENT 02 会場内で使える食事券3000円分`,
+    height: 1200,
+    alt: FV_ALT_BASE,
+    present: {
+      // 原本 FIELDSTYLE_FV_LP2-1-1 の y=1236〜1799（上下の黒い余白を詰めて切り出し）
+      src: "/design/lp2-fv-1-present.png",
+      width: 465,
+      height: 564,
+      alt: "予約者全員にプレゼント！ PRESENT 01 FIELDSTYLE入場チケット PRESENT 02 会場内で使える食事券3000円分",
+      scale: 0.8,
+      marginTop: 8,
+      marginBottom: 28,
+    },
   },
   "2": { src: "/design/lp2-fv-2.jpg", width: 595, height: 1554, alt: FV_ALT_BASE },
 };
@@ -47,6 +67,8 @@ export const BODY_IMAGE = {
    * （#FFFFFF 単色 138px + 境界 1px）のため表示しない。画像ファイル自体は無加工。
    */
   visibleHeight: 12997,
+  /** 冒頭のグレー余白（ボタン上 約100px）のうち表示しない高さ。座標は原寸のまま */
+  trimTop: 56,
 } as const;
 
 /* ---------- 透明リンク（ボディ画像座標） ---------- */
