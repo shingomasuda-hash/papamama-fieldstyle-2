@@ -57,11 +57,11 @@ npm run lint
 | `paint-line` | LINEから予約（塗装概要の下） | PAINT_URL |
 | `footer-consultation` | 相談予約 | CONSULTATION_URL |
 | `footer-paint` | 塗装体験予約 | PAINT_URL |
-| `footer-instagram` | Instagram アイコン | INSTAGRAM_URL（Instagram 本体ではない） |
+| `footer-instagram` | Instagram アイコン | INSTAGRAM_URL（https://www.instagram.com/papamamacars/） |
+| `footer-facebook` | Facebook アイコン | FACEBOOK_URL（https://www.facebook.com/papamamacars/?locale=ja_JP） |
 
 ### 未設定のリンク（遷移先が支給されていないため創作していない）
 
-- フッター Follow Us の **Facebook アイコン**（原本 x=220〜292, y=13929〜14002）
 - フッター Follow Us の **LINE アイコン**（原本 x=328〜404, y=13928〜14004）
 
 遷移先が決まったら `src/lp2/config.ts` の `CTA_AREAS` に追加する。

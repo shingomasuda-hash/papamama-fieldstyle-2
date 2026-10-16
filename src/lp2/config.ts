@@ -9,7 +9,8 @@
 /* ---------- リンク先（一字一句変更しないこと） ---------- */
 export const CONSULTATION_URL = "https://s.lmes.jp/landing-qr/2007227107-GgA3P6zw?uLand=hxg1Jo";
 export const PAINT_URL = "https://s.lmes.jp/landing-qr/2007227107-GgA3P6zw?uLand=WvWa0c";
-export const INSTAGRAM_URL = "https://s.lmes.jp/landing-qr/2007227107-GgA3P6zw?uLand=pxS26L";
+export const INSTAGRAM_URL = "https://www.instagram.com/papamamacars/";
+export const FACEBOOK_URL = "https://www.facebook.com/papamamacars/?locale=ja_JP";
 
 /* ---------- デザイン原寸 ---------- */
 export const DESIGN_WIDTH = 517;
@@ -72,12 +73,13 @@ export const BODY_IMAGE = {
 } as const;
 
 /* ---------- 透明リンク（ボディ画像座標） ---------- */
-export type CtaKind = "consultation" | "paint" | "instagram";
+export type CtaKind = "consultation" | "paint" | "instagram" | "facebook";
 
 export const CTA_HREF: Record<CtaKind, string> = {
   consultation: CONSULTATION_URL,
   paint: PAINT_URL,
   instagram: INSTAGRAM_URL,
+  facebook: FACEBOOK_URL,
 };
 
 export type CtaArea = {
@@ -100,6 +102,7 @@ export const CTA_AREAS: CtaArea[] = [
   { id: "footer-consultation", kind: "consultation", label: "相談予約", x: 41, y: 12038, w: 203, h: 56 },
   { id: "footer-paint", kind: "paint", label: "塗装体験予約", x: 271, y: 12038, w: 203, h: 56 },
   { id: "footer-instagram", kind: "instagram", label: "Instagram", x: 109, y: 12812, w: 76, h: 75 },
+  { id: "footer-facebook", kind: "facebook", label: "Facebook", x: 219, y: 12811, w: 74, h: 74 },
 ];
 
 /* ---------- STAFF スライダー（ボディ画像座標） ---------- */

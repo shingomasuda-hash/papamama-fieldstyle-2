@@ -16,7 +16,8 @@
   "urls": {
     "CONSULTATION_URL": "https://s.lmes.jp/landing-qr/2007227107-GgA3P6zw?uLand=hxg1Jo",
     "PAINT_URL": "https://s.lmes.jp/landing-qr/2007227107-GgA3P6zw?uLand=WvWa0c",
-    "INSTAGRAM_URL": "https://s.lmes.jp/landing-qr/2007227107-GgA3P6zw?uLand=pxS26L"
+    "INSTAGRAM_URL": "https://www.instagram.com/papamamacars/",
+    "FACEBOOK_URL": "https://www.facebook.com/papamamacars/?locale=ja_JP"
   },
   "ctaAreasBodyXYWH": "src/lp2/config.ts の CTA_AREAS を参照（実画像から色検出で確定）"
 }
