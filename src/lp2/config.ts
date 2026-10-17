@@ -22,6 +22,18 @@ const FV_ALT_BASE =
 
 type FvImage = { src: string; width: number; height: number; alt: string };
 
+/** FV 直下のプレゼント告知（FV1・FV2 共通） */
+const PRESENT = {
+  // 原本 FIELDSTYLE_FV_LP2-1-1 の y=1236〜1799（上下の黒い余白を詰めて切り出し）
+  src: "/design/lp2-fv-1-present.png",
+  width: 465,
+  height: 564,
+  alt: "予約者全員にプレゼント！ PRESENT 01 FIELDSTYLE入場チケット PRESENT 02 会場内で使える食事券3000円分",
+  scale: 0.8,
+  marginTop: 8,
+  marginBottom: 28,
+};
+
 /**
  * FV 画像（原本画素のまま配信。幅517px表示に拡縮、縦横比は維持）。
  * `present` があれば FV 直下にプレゼント告知を縮小・中央寄せで表示する。
@@ -37,18 +49,9 @@ export const FV_IMAGES: Record<
     width: 465,
     height: 1200,
     alt: FV_ALT_BASE,
-    present: {
-      // 原本 FIELDSTYLE_FV_LP2-1-1 の y=1236〜1799（上下の黒い余白を詰めて切り出し）
-      src: "/design/lp2-fv-1-present.png",
-      width: 465,
-      height: 564,
-      alt: "予約者全員にプレゼント！ PRESENT 01 FIELDSTYLE入場チケット PRESENT 02 会場内で使える食事券3000円分",
-      scale: 0.8,
-      marginTop: 8,
-      marginBottom: 28,
-    },
+    present: PRESENT,
   },
-  "2": { src: "/design/lp2-fv-2.jpg", width: 595, height: 1554, alt: FV_ALT_BASE },
+  "2": { src: "/design/lp2-fv-2.jpg", width: 595, height: 1554, alt: FV_ALT_BASE, present: PRESENT },
 };
 
 /** `?fv=` の値から FV を決定。クエリなし・未知の値は FV1 */
